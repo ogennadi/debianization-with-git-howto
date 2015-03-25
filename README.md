@@ -28,7 +28,7 @@ Export the following variables in your ~/.bashrc
 
 - Import the upstream source into the package
 
-    git import-orig ../$PROJECT-$TAG-orig.tar.gz
+    gbp import-orig ../$PROJECT-$TAG-orig.tar.gz
 
   This creates a new branch called 'upstream' that will contain the version of the upstream code you want to make a package for.
   You should never make your own changes on this branch except for importing a subsequent release of the upstream code.  All of your
