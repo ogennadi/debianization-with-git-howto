@@ -51,10 +51,19 @@ Export the following variables in your ~/.bashrc
 
     git log --pretty --numstat $TAG | git2cl > ChangeLog 
 
+
 - Generating the package could now in theory be as simple as running 'git buildpackage'.  More than likely it will fail
   and you'll have to edit the debian/rules file.  Even if the package build *does* succeed, there will be a bunch of warnings
   from lintian (like lint but for checking that a Debian package is up to scratch).  The errors may seem hard to understand
   but Google for them and you'll find a good explanation for what they mean.
+
+- Here are common lintian errors
+    - *E: bice changes: changed-by-address-malformed oge <oge@unknown>*
+    - Set DEBEMAIL and DEBFULLNAME env vars
+    - * E: bice changes: bad-distribution-in-changes-file unstable*
+    - 
+     
+    
 
 - Add dependencies to the debian/control file.  Currently you have added no dependencies to your package.  It's a good idea
   that you do, that way when installing your package from apt, it will pull in all of the dependencies.
